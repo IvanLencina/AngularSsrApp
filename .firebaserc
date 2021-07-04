@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularssrtest": {
+      "hosting": {
+        "angular-ssr-test": [
+          "angularssrtest"
+        ]
+      }
+    }
+  }
+}
