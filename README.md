@@ -21,3 +21,14 @@ After that if we view the source code, we will see all the content rendered on t
 
 * What features run in Client and wich ones in Server side? Here is an link: https://github.com/angular/universal/blob/master/docs/gotchas.md
 
+
+## Deployment in Firebase Cloud Functions
+
+We cannot use the common used Firebase Hosting, because it provides us a Static files server and we need to run node in order to make the SSR App works.
+
+We need to intall AngularFire because it automatizes the deployment process for us. It adds a command to simplify the process.
+Also, this library has a lot of features to implement like Realtime databases, Authentication, and more.
+
+`ng add @angular/fire`
+
+`ng deploy`  <- This command simplifies the process to deploy a SSR Angular app to firebase cloud functions instead of Firebase Hosting.
