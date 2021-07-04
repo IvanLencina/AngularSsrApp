@@ -30,4 +30,5 @@ We need to intall AngularFire because it automatizes the deployment process for 
 Also, this library has a lot of features to implement like Realtime databases, Authentication, and more.
 
 `ng add @angular/fire`
+
 `ng deploy`  <- This command simplifies the process to deploy a SSR Angular app to firebase cloud functions instead of Firebase Hosting.
