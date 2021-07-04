@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-map',
@@ -10,18 +11,23 @@ export class MapComponent implements OnInit {
   lat: number;
   lng: number;
 
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId
+  ) { }
 
   ngOnInit(): void {
   }
 
   getPosition() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.lat = position.coords.latitude;
-      this.lng = position.coords.longitude;
-    }, error => {
-      console.log(error);
-    })
+    // With this sentence we assure that the code will not run on the server.
+    if (isPlatformBrowser(this.platformId)) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
+      }, error => {
+        console.log(error);
+      })
+    }
   }
 
 }
