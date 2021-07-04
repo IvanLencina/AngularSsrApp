@@ -32,3 +32,8 @@ Also, this library has a lot of features to implement like Realtime databases, A
 `ng add @angular/fire`
 
 `ng deploy`  <- This command simplifies the process to deploy a SSR Angular app to firebase cloud functions instead of Firebase Hosting.
+
+NOTE: ng deploy, not only makes the deploy. It also builds the production app.
+
+
+After installing the library, it will add some files and modify others with all the needed configuration.
