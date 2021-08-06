@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Description
 
-This project was intended to be for testing purposes. We well only use fetching and geolocation features in order to see the differences between Client side and Server side responsabilities.
+This project was intended to be for testing purposes. I'm only using fetch and geolocation features in order to see the differences between Client side and Server side responsabilities.
 
 ## Angular Universal
 
